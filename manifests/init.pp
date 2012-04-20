@@ -9,15 +9,9 @@ class cucumber
 {
   include ruby::gems
 
-  package { 'gherkin':
+  package { 'cucumber':
     provider => gem,
-    ensure   => installed,
+    ensure   => present,
     require  => Class['ruby::gems']
   }
-
-	package { 'cucumber':
-		provider => gem,
-		ensure   => installed,
-		require  => Package['gherkin']
-	}
 }
