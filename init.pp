@@ -1,0 +1,3 @@
+class { 'cucumber':
+  # no parameters
+}
